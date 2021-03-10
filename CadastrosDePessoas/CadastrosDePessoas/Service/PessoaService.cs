@@ -17,5 +17,7 @@ namespace CadastrosDePessoas.Service
         {
             return pessoas;
         }
+
+        public static void DeletePessoa(Pessoa pessoa) => pessoas.Remove(pessoa);
     }
 }
