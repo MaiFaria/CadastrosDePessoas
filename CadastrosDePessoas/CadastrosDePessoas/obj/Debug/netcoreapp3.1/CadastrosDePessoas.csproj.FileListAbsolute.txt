@@ -1,0 +1,13 @@
+C:\Users\mfmai\OneDrive\Área de Trabalho\CadastrosDePessoas\CadastrosDePessoas\CadastrosDePessoas\bin\Debug\netcoreapp3.1\CadastrosDePessoas.exe
+C:\Users\mfmai\OneDrive\Área de Trabalho\CadastrosDePessoas\CadastrosDePessoas\CadastrosDePessoas\bin\Debug\netcoreapp3.1\CadastrosDePessoas.deps.json
+C:\Users\mfmai\OneDrive\Área de Trabalho\CadastrosDePessoas\CadastrosDePessoas\CadastrosDePessoas\bin\Debug\netcoreapp3.1\CadastrosDePessoas.runtimeconfig.json
+C:\Users\mfmai\OneDrive\Área de Trabalho\CadastrosDePessoas\CadastrosDePessoas\CadastrosDePessoas\bin\Debug\netcoreapp3.1\CadastrosDePessoas.runtimeconfig.dev.json
+C:\Users\mfmai\OneDrive\Área de Trabalho\CadastrosDePessoas\CadastrosDePessoas\CadastrosDePessoas\bin\Debug\netcoreapp3.1\CadastrosDePessoas.dll
+C:\Users\mfmai\OneDrive\Área de Trabalho\CadastrosDePessoas\CadastrosDePessoas\CadastrosDePessoas\bin\Debug\netcoreapp3.1\CadastrosDePessoas.pdb
+C:\Users\mfmai\OneDrive\Área de Trabalho\CadastrosDePessoas\CadastrosDePessoas\CadastrosDePessoas\obj\Debug\netcoreapp3.1\CadastrosDePessoas.csprojAssemblyReference.cache
+C:\Users\mfmai\OneDrive\Área de Trabalho\CadastrosDePessoas\CadastrosDePessoas\CadastrosDePessoas\obj\Debug\netcoreapp3.1\CadastrosDePessoas.AssemblyInfoInputs.cache
+C:\Users\mfmai\OneDrive\Área de Trabalho\CadastrosDePessoas\CadastrosDePessoas\CadastrosDePessoas\obj\Debug\netcoreapp3.1\CadastrosDePessoas.AssemblyInfo.cs
+C:\Users\mfmai\OneDrive\Área de Trabalho\CadastrosDePessoas\CadastrosDePessoas\CadastrosDePessoas\obj\Debug\netcoreapp3.1\CadastrosDePessoas.csproj.CoreCompileInputs.cache
+C:\Users\mfmai\OneDrive\Área de Trabalho\CadastrosDePessoas\CadastrosDePessoas\CadastrosDePessoas\obj\Debug\netcoreapp3.1\CadastrosDePessoas.dll
+C:\Users\mfmai\OneDrive\Área de Trabalho\CadastrosDePessoas\CadastrosDePessoas\CadastrosDePessoas\obj\Debug\netcoreapp3.1\CadastrosDePessoas.pdb
+C:\Users\mfmai\OneDrive\Área de Trabalho\CadastrosDePessoas\CadastrosDePessoas\CadastrosDePessoas\obj\Debug\netcoreapp3.1\CadastrosDePessoas.genruntimeconfig.cache
