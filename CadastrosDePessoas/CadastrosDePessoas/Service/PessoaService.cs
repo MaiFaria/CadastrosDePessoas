@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using CadastrosDePessoas.Model;
+using System.Collections.Generic;
 
 namespace CadastrosDePessoas.Service
 {
@@ -18,6 +19,30 @@ namespace CadastrosDePessoas.Service
             return pessoas;
         }
 
-        public static void DeletePessoa(Pessoa pessoa) => pessoas.Remove(pessoa);
+        public static string DeletePessoaFisica(string cpfExcluir)
+        {
+            foreach(PessoaFisica pessoa in pessoas)
+            {
+                if(IsPessoaEquals(pessoa, cpfExcluir))
+                {
+                    pessoas.Remove(pessoa);
+                    return "Cadastro removido com sucesso!!";
+                }
+            }
+            return "Cadastro não localizado.";
+        }
+
+        public static string DeletePessoaJuridica(string cnpjExcluir)
+        {
+            foreach(PessoaJuridica pessoa in pessoas)
+            {
+                if(IsPessoaEquals(pessoa, cnpjExcluir))
+                {
+                    pessoas.Remove(pessoa);
+                    return "Cadastro removido com sucesso!!";
+                }
+            }
+            return "Cadastro não localizado.";
+        }
     }
 }

@@ -5,36 +5,37 @@ using System.Text;
 
 namespace CadastrosDePessoas.MenuService
 {
-    public class NovoCadastro : MenuDeCadastro
+    class NovoCadastroPessoaJuridica
     {
-        public static void InitPessoaFisica()
+       public static void InitPessoaJuridica()
         {
             Console.WriteLine("Novo Cadastro");
-            PessoaFisica pessoaF = new PessoaFisica();
+            PessoaJuridica pessoaJ = new PessoaJuridica();
 
-            Console.WriteLine("Digite o seu nome completo");
+            Console.WriteLine("Digite o seu nome completo: ");
             string nome = Console.ReadLine();
-            pessoaF.Nome = nome;
+            pessoaJ.Nome = nome;
 
-            Console.WriteLine("Digite o seu CPF");
-            string cpf = Console.ReadLine();
-            pessoaF.CPF = cpf;
+            Console.WriteLine("Digite o seu CNPJ: ");
+            string cnpj = Console.ReadLine();
+            pessoaJ.CNPJ = cnpj;
 
-            Console.WriteLine("Digite o seu Contato");
+            Console.WriteLine("Digite o seu contato: ");
             string contato = Console.ReadLine();
-            pessoaF.Contato = contato;
+            pessoaJ.Contato = contato;
 
             Console.WriteLine("Os dados estão corretos? "
-                + "\nNome: " + nome + "\nCPF: " + cpf + "\nContato: " + contato);
+                + "\nNome: " + nome + "\nCPF: " + cnpj + "\nContato: " + contato);
 
             Console.WriteLine("Confirme os dados - Digite 1;");
             int confirmacao = Int32.Parse(Console.ReadLine());
 
-            if(confirmacao != 1)
+            if (confirmacao != 1)
             {
                 throw new ArgumentException("Cadastro não realizado!");
             }
-
         }
+
+
     }
 }

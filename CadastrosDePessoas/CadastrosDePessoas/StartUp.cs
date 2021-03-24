@@ -16,8 +16,7 @@ namespace CadastrosDePessoas
             Console.WriteLine("Nome da pessoa: " + pessoaFisica.Nome);
 
             Console.WriteLine("Nome da pessoa: " + pessoaJuridica.Nome);
-            Console.ReadLine();
+            Console.ReadKey();
         }
-
     }
 }
