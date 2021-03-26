@@ -1,7 +1,6 @@
 ﻿using CadastrosDePessoas.Model;
+using CadastrosDePessoas.Service;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CadastrosDePessoas.MenuService
 {
@@ -33,9 +32,10 @@ namespace CadastrosDePessoas.MenuService
             if (confirmacao != 1)
             {
                 throw new ArgumentException("Cadastro não realizado!");
+
             }
+            PessoaService.SalvarPessoa(pessoaJ);
+            Console.WriteLine("Cadastro realizado com sucesso!!");
         }
-
-
     }
 }

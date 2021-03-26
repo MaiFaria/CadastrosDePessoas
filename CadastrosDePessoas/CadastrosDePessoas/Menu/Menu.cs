@@ -6,7 +6,7 @@ namespace CadastrosDePessoas.Menu
 {
     class Menu
     {
-        public static void Main(String[] args)
+        public static void Main(string[] args)
         {
             int valorMenu = 1;
 
@@ -31,24 +31,40 @@ namespace CadastrosDePessoas.Menu
                         break;
                     case 4:
                         Console.WriteLine("Digite 1 para remover Pessoa Física ou 2 para Pessoa Jurídica: ");
-                        string opcao = Console.ReadLine();
+                        int opcaoExcluir = Int32.Parse(Console.ReadLine());
 
-                        if(opcao = 1)
+                        if(opcaoExcluir == 1)
                         {
                             Console.WriteLine("\nInforme o CPF para exclusão: ");
                             string cpfExcluir = Console.ReadLine();
                             Console.WriteLine(PessoaService.DeletePessoaFisica(cpfExcluir));
                         } 
-                        else if(opcao = 2)
+                        else if(opcaoExcluir == 2)
                         {
                             Console.WriteLine("\nInforme o CNPJ para exclusão: ");
                             string cnpjExcluir = Console.ReadLine();
                             Console.WriteLine(PessoaService.DeletePessoaJuridica(cnpjExcluir));
                         }
                         break;
-                }   
+                    case 5:
+                        Console.WriteLine("Informe 1 para consulta Pessoa Física ou 2 para Pessoa Jurídica: ");
+                        int opcaoConsulta = Int32.Parse(Console.ReadLine());
 
-            } while ();
+                        if(opcaoConsulta == 1)
+                        {
+                            Console.WriteLine("Informe o CPF para consulta");
+                            string cpfConsulta = Console.ReadLine();
+                            Console.WriteLine(PessoaService.BuscaPessoaFisica(cpfConsulta));
+                        }
+                        if(opcaoConsulta == 2)
+                        {
+                            Console.WriteLine("Informe o CNPJ para consulta");
+                            string cnpjConsulta = Console.ReadLine();
+                            Console.WriteLine(PessoaService.BuscaPessoaJuridica(cnpjConsulta));
+                        }
+                        break;
+                }   
+            } while (valorMenu != 0);
         }
     }
 }

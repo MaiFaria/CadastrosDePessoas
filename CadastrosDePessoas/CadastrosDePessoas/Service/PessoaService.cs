@@ -19,6 +19,30 @@ namespace CadastrosDePessoas.Service
             return pessoas;
         }
 
+        public static string BuscaPessoaFisica(string cpfConsultar)
+        {
+            foreach(PessoaFisica pessoa in pessoas)
+            {
+                if(IsPessoaEquals(pessoa, cpfConsultar))
+                {
+                    return pessoa.ToString();
+                }
+            }
+            return null;
+        }
+
+        public static string BuscaPessoaJuridica(string cnpjConsultar)
+        {
+            foreach(PessoaJuridica pessoa in pessoas)
+            {
+                if(IsPessoaEquals(pessoa, cnpjConsultar))
+                {
+                    return pessoa.ToString();
+                }
+            }
+            return null;
+        }
+
         public static string DeletePessoaFisica(string cpfExcluir)
         {
             foreach(PessoaFisica pessoa in pessoas)
