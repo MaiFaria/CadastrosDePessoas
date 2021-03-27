@@ -15,14 +15,6 @@ namespace CadastrosDePessoas
             Console.WriteLine("0 - Sair\n");
         }
 
-        public void Editar()
-        {
-            Console.WriteLine("*** Escolha a Opção desejada ***\n");
-            Console.WriteLine("Editar cadastro de Pessoa Física\n");
-            Console.WriteLine("Editar Cadastro de Pessoa Jurídica\n");
-            Console.WriteLine("0 - Sair\n");
-        }
-
         public void EditarPessoaFísica() 
         {
             Console.WriteLine("*** Menu de Edição de Pessoa Física ***\n");

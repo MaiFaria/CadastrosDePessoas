@@ -1,4 +1,5 @@
 ﻿using CadastrosDePessoas.MenuService;
+using CadastrosDePessoas.Model;
 using CadastrosDePessoas.Service;
 using System;
 
@@ -26,8 +27,17 @@ namespace CadastrosDePessoas.Menu
                         NovoCadastroPessoaJuridica.InitPessoaJuridica();
                         break;
                     case 3:
-                        Console.WriteLine("Informe a opção desejada: ");
-                        cadastro.Editar();
+                        Console.WriteLine("Digite 1 para editar cadastro de Pessoa Física ou 2 para Pessoa Jurídica");
+                        int opcaoEditar = Int32.Parse(Console.ReadLine());
+
+                        if(opcaoEditar == 1)
+                        {
+                            cadastro.EditarPessoaFísica();
+                        }
+                        else if(opcaoEditar == 2)
+                        {
+                            cadastro.EditarPessoaFísica();
+                        }
                         break;
                     case 4:
                         Console.WriteLine("Digite 1 para remover Pessoa Física ou 2 para Pessoa Jurídica: ");
@@ -37,13 +47,13 @@ namespace CadastrosDePessoas.Menu
                         {
                             Console.WriteLine("\nInforme o CPF para exclusão: ");
                             string cpfExcluir = Console.ReadLine();
-                            Console.WriteLine(PessoaService.DeletePessoaFisica(cpfExcluir));
+                            Console.WriteLine(PessoaFisicaService.DeletePessoaFisica(cpfExcluir));
                         } 
                         else if(opcaoExcluir == 2)
                         {
                             Console.WriteLine("\nInforme o CNPJ para exclusão: ");
                             string cnpjExcluir = Console.ReadLine();
-                            Console.WriteLine(PessoaService.DeletePessoaJuridica(cnpjExcluir));
+                            Console.WriteLine(PessoaJuridicaService.DeletePessoaJuridica(cnpjExcluir));
                         }
                         break;
                     case 5:
@@ -54,13 +64,15 @@ namespace CadastrosDePessoas.Menu
                         {
                             Console.WriteLine("Informe o CPF para consulta");
                             string cpfConsulta = Console.ReadLine();
-                            Console.WriteLine(PessoaService.BuscaPessoaFisica(cpfConsulta));
+                            PessoaFisica pessoaFisica = (PessoaFisica) PessoaFisicaService.BuscaPessoaFisica(cpfConsulta);
+                            Console.WriteLine($"Nome: {pessoaFisica.Nome} \nCPF: {pessoaFisica.CPF} \nContato: {pessoaFisica.Contato}");
                         }
                         if(opcaoConsulta == 2)
                         {
                             Console.WriteLine("Informe o CNPJ para consulta");
                             string cnpjConsulta = Console.ReadLine();
-                            Console.WriteLine(PessoaService.BuscaPessoaJuridica(cnpjConsulta));
+                            PessoaJuridica pessoaJuridica = (PessoaJuridica) PessoaJuridicaService.BuscaPessoaJuridica(cnpjConsulta);
+                            Console.WriteLine($"Nome: {pessoaJuridica.Nome} \nCNPJ: {pessoaJuridica.CNPJ} \nContato: {pessoaJuridica.Contato}");
                         }
                         break;
                 }   

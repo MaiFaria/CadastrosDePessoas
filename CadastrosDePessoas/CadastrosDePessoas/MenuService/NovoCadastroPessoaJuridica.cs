@@ -23,8 +23,7 @@ namespace CadastrosDePessoas.MenuService
             string contato = Console.ReadLine();
             pessoaJ.Contato = contato;
 
-            Console.WriteLine("Os dados estão corretos? "
-                + "\nNome: " + nome + "\nCPF: " + cnpj + "\nContato: " + contato);
+            Console.WriteLine($"Os dados estão corretos? \nNome: {nome} \nCNPJ: {cnpj} \nContato: {contato}");
 
             Console.WriteLine("Confirme os dados - Digite 1;");
             int confirmacao = Int32.Parse(Console.ReadLine());
