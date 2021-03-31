@@ -6,31 +6,34 @@ namespace CadastrosDePessoas
     {
         public void Menu()
         {
-            Console.WriteLine("*** Menu de Cadastro ***\n");
-            Console.WriteLine("01 - Novo Cadastro de Pessoa Física\n");
-            Console.WriteLine("02 - Novo Cadastro de Pessoa Jurídica\n");
-            Console.WriteLine("03 - Editar\n");
-            Console.WriteLine("04 - Excluir\n");
-            Console.WriteLine("05 - Consultar\n");
-            Console.WriteLine("0 - Sair\n");
+            string mensagem = "*** Menu de Cadastro ***\n" + 
+                "1 - Novo Cadastro de Pessoa Física\n" +
+                "2 - Novo Cadastro de Pessoa Jurídica\n" +
+                "3 - Editar\n" +
+                "4 - Excluir\n" +
+                "5 - Consultar\n" +
+                "0 - Sair\n";
+            Console.WriteLine(mensagem);
         }
 
         public void EditarPessoaFísica() 
         {
-            Console.WriteLine("*** Menu de Edição de Pessoa Física ***\n");
-            Console.WriteLine("01 - Nome\n");
-            Console.WriteLine("02 - CPF\n");
-            Console.WriteLine("03 - Contato\n");
-            Console.WriteLine("0 - Sair\n");
+            string mensagem = "*** Menu de Edição de Pessoa Física ***\n" +
+                "1 - Nome\n" +
+                "2 - CPF\n" +
+                "3 - Contato\n" +
+                "0 - Sair\n";
+            Console.WriteLine(mensagem);
         }
 
         public void EditarPessoaJurídica()
         {
-            Console.WriteLine("*** Menu de Edição de Pessoa Jurídica ***\n");
-            Console.WriteLine("01 - Nome\n");
-            Console.WriteLine("02 - CNPJ\n");
-            Console.WriteLine("03 - Contato\n");
-            Console.WriteLine("0 - Sair\n");
+            string mensagem = "*** Menu de Edição de Pessoa Jurídica ***\n" +
+                "1 - Nome\n" +
+                "2 - CNPJ\n" +
+                "3 - Contato\n" +
+                "0 - Sair\n";
+            Console.WriteLine(mensagem);
         }
     }
 }
