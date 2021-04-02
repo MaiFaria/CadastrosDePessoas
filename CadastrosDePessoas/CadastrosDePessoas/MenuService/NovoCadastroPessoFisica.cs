@@ -14,7 +14,7 @@ namespace CadastrosDePessoas.MenuService
             Console.WriteLine("Digite o seu nome completo");
             string nome = Console.ReadLine();
             pessoaF.Nome = nome;
-            
+
             Console.WriteLine("Digite o seu CPF");
             string cpf = Console.ReadLine();
             pessoaF.CPF = cpf;
@@ -28,13 +28,12 @@ namespace CadastrosDePessoas.MenuService
             Console.WriteLine("Confirme os dados - Digite 1;");
             int confirmacao = Int32.Parse(Console.ReadLine());
 
-            if(confirmacao != 1)
+            if (confirmacao != 1)
             {
                 throw new ArgumentException("Cadastro não realizado!");
             }
             PessoaService.SalvarPessoa(pessoaF);
             Console.WriteLine("Cadastro realizado com Sucesso!!");
-
         }
     }
 }

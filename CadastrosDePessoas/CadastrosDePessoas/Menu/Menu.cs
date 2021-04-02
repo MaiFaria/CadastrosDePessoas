@@ -5,7 +5,7 @@ using System;
 
 namespace CadastrosDePessoas.Menu
 {
-    class Menu
+    class Menu 
     {
         public static void Main(string[] args)
         {
@@ -30,13 +30,14 @@ namespace CadastrosDePessoas.Menu
                         Console.WriteLine("Digite 1 para editar cadastro de Pessoa Física ou 2 para Pessoa Jurídica");
                         int opcaoEditar = Int32.Parse(Console.ReadLine());
 
-                        if(opcaoEditar == 1)
+                        if (opcaoEditar == 1)
                         {
-                            cadastro.EditarPessoaFísica();
+                            Console.WriteLine("Digite o CPF para editar: ");
+                            string cpfEditar = Console.ReadLine();
+                            EditarCadastroPessoaFisica.InitEdicaoPessoaFisica(cpfEditar);
                         }
-                        else if(opcaoEditar == 2)
+                        else if (opcaoEditar == 2)
                         {
-                            cadastro.EditarPessoaFísica();
                         }
                         break;
                     case 4:
