@@ -16,7 +16,7 @@ namespace CadastrosDePessoas
             Console.WriteLine(mensagem);
         }
 
-        public void EditarPessoaFísica() 
+        public void EditarPessoaFisica() 
         {
             string mensagem = "*** Menu de Edição de Pessoa Física ***\n" +
                 "1 - Nome\n" +
@@ -26,7 +26,7 @@ namespace CadastrosDePessoas
             Console.WriteLine(mensagem);
         }
 
-        public void EditarPessoaJurídica()
+        public void EditarPessoaJuridica()
         {
             string mensagem = "*** Menu de Edição de Pessoa Jurídica ***\n" +
                 "1 - Nome\n" +

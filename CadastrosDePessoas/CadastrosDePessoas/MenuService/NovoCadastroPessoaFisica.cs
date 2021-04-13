@@ -4,7 +4,7 @@ using System;
 
 namespace CadastrosDePessoas.MenuService
 {
-    public class NovoCadastroPessoFisica : MenuDeCadastro
+    public class NovoCadastroPessoaFisica : MenuDeCadastro
     {
         public static void InitPessoaFisica()
         {
@@ -14,7 +14,7 @@ namespace CadastrosDePessoas.MenuService
             Console.WriteLine("Digite o seu nome completo");
             string nome = Console.ReadLine();
             pessoaF.Nome = nome;
-
+            
             Console.WriteLine("Digite o seu CPF");
             string cpf = Console.ReadLine();
             pessoaF.CPF = cpf;

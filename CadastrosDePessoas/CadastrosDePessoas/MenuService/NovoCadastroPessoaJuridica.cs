@@ -4,9 +4,9 @@ using System;
 
 namespace CadastrosDePessoas.MenuService
 {
-    class NovoCadastroPessoaJuridica
+    public class NovoCadastroPessoaJuridica : MenuDeCadastro
     {
-       public static void InitPessoaJuridica()
+        public static void InitPessoaJuridica()
         {
             Console.WriteLine("Novo Cadastro");
             PessoaJuridica pessoaJ = new PessoaJuridica();

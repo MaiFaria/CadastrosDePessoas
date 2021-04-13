@@ -21,7 +21,7 @@ namespace CadastrosDePessoas.Menu
                 switch (valorMenu)
                 {
                     case 1:
-                        NovoCadastroPessoFisica.InitPessoaFisica();
+                        NovoCadastroPessoaFisica.InitPessoaFisica();
                         break;
                     case 2:
                         NovoCadastroPessoaJuridica.InitPessoaJuridica();
@@ -38,6 +38,9 @@ namespace CadastrosDePessoas.Menu
                         }
                         else if (opcaoEditar == 2)
                         {
+                            Console.WriteLine("Digite o CNPJ para editar: ");
+                            string cpfEditar = Console.ReadLine();
+                            EditarCadastroPessoaJuridica.InitEdicaoPessoaJuridica(cpfEditar);
                         }
                         break;
                     case 4:

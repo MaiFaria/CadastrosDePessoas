@@ -2,7 +2,7 @@
 
 namespace CadastrosDePessoas
 {
-    public class Pessoa
+    public abstract class Pessoa
     {
         public Pessoa() { }
 

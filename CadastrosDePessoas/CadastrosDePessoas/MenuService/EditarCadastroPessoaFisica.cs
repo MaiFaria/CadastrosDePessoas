@@ -4,73 +4,74 @@ using System;
 
 namespace CadastrosDePessoas.MenuService
 {
-    public class EditarCadastroPessoaFisica : MenuDeCadastro
+    public class EditarCadastroPessoaFisica
     {
         public static void InitEdicaoPessoaFisica(string cpf)
         {
-            foreach (PessoaFisica p in PessoaFisicaService.GetPessoas())
+            int valorMenu = 1;
+
+            do
             {
-                if (PessoaFisicaService.IsPessoaFisicaEquals(p, cpf))
+                foreach (PessoaFisica p in PessoaFisicaService.GetPessoas())
                 {
-                    NovoCadastroPessoFisica editarPessoaFisica = new NovoCadastroPessoFisica();
-                    editarPessoaFisica.EditarPessoaFísica();
-                    Console.WriteLine("Digite a opção a ser editada");
-                    int menu = Int32.Parse(Console.ReadLine());
-
-                    switch (menu)
+                    if (PessoaFisicaService.IsPessoaFisicaEquals(p, cpf))
                     {
-                        case 1:
-                            Console.WriteLine("Digite o seu Nome completo para alteração");
-                            string nomeEditado = Console.ReadLine();
-                            p.Nome = nomeEditado;
+                        NovoCadastroPessoaFisica editarPessoaFisica = new NovoCadastroPessoaFisica();
+                        editarPessoaFisica.EditarPessoaFisica();
+                        Console.WriteLine("Digite a opção a ser editada");
+                        int menu = Int32.Parse(Console.ReadLine());
 
-                            Console.WriteLine("Confirme os dados para alteração - Digite 1 ");
-                            int confirmaNome = Int32.Parse(Console.ReadLine());
+                        switch (menu)
+                        {
+                            case 1:
+                                Console.WriteLine("Digite o seu Nome completo para alteração");
+                                string nomeEditado = Console.ReadLine();
+                                p.Nome = nomeEditado;
 
-                            if (confirmaNome == 1)
-                            {
+                                Console.WriteLine($"Confirme os dados para alteração: \nNome {nomeEditado} - Digite 1 ");
+                                int confirmaNome = Int32.Parse(Console.ReadLine());
+
+                                if (confirmaNome == 1)
+                                {
+                                    throw new ArgumentException("Cadastro não alterado!");
+                                }
                                 PessoaFisicaService.SalvarPessoa(p);
                                 Console.WriteLine("Cadastro alterado com SUCESSO");
-                            }
-                            break;
-                        case 2:
-                            Console.WriteLine("Digite o seu CPF para alteração");
-                            string cpfEditado = Console.ReadLine();
-                            p.CPF = cpfEditado;
+                                break;
+                            case 2:
+                                Console.WriteLine("Digite o seu CPF para alteração");
+                                string cpfEditado = Console.ReadLine();
+                                p.CPF = cpfEditado;
 
-                            Console.WriteLine("Confirme os dados para alteração - Digite 1 ");
-                            int confirmaCPF = Int32.Parse(Console.ReadLine());
+                                Console.WriteLine($"Confirme os dados para alteração: \nCPF {cpfEditado} - Digite 1 ");
+                                int confirmaCPF = Int32.Parse(Console.ReadLine());
 
-                            if (confirmaCPF == 1)
-                            {
+                                if (confirmaCPF == 1)
+                                {
+                                    throw new ArgumentException("Cadastro não alterado!");
+                                }
                                 PessoaFisicaService.SalvarPessoa(p);
                                 Console.WriteLine("Cadastro alterado com SUCESSO!!!");
-                            }
-                            break;
-                        case 3:
-                            Console.WriteLine("Digite o contato para alteração");
-                            string contatoEditado = Console.ReadLine();
-                            p.Contato = contatoEditado;
+                                break;
+                            case 3:
+                                Console.WriteLine("Digite o contato para alteração");
+                                string contatoEditado = Console.ReadLine();
+                                p.Contato = contatoEditado;
 
-                            Console.WriteLine("Confirme os dados para alteração - Digite 1");
-                            int confirmaContato = Int32.Parse(Console.ReadLine());
+                                Console.WriteLine($"Confirme os dados para alteração: \nContato {contatoEditado} - Digite 1");
+                                int confirmaContato = Int32.Parse(Console.ReadLine());
 
-                            if (confirmaContato == 1)
-                            {
+                                if (confirmaContato == 1)
+                                {
+                                    throw new ArgumentException("Cadastro não alterado!");   
+                                }
                                 PessoaFisicaService.SalvarPessoa(p);
                                 Console.WriteLine("Cadastro alterado com SUCESSO!!!");
-                            }
-                            break;
-                        default:
-                            Console.WriteLine("Opção Inválida");
-                            break;
+                                break;
+                        }
                     }
                 }
-                else
-                {
-                    Console.WriteLine("CPF não localizado!");
-                }
-            }
+            } while (valorMenu != 0);
         }
     }
 }
